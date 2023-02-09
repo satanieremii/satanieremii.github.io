@@ -172,7 +172,7 @@ p {
 }
 
 #title {
-    background: url(/Users/satanieremii/Desktop/itstep/диплом/сайт/site/imgland/darkforest.jpg);
+    background: url(../imgland/darkforest.jpg);
     background-size: cover;
     color: transparent;
     -webkit-text-fill-color: transparent;
@@ -182,7 +182,7 @@ p {
 
 @font-face {
     font-family: JOURNALISM;
-    src: url(/Users/satanieremii/Library/Fonts/JOURNALISM.ttf);
+    src: url(../imgland/JOURNALISM.ttf);
 }
 
 h5 {
