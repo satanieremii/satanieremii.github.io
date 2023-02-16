@@ -7,21 +7,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hethbosut</title>
     <link rel="stylesheet" href="css/perspg.css">
-    <script>
-        $(window).scroll(function() {
-            $(".imagegal").css("opacity", 1 - $(window).scrollTop() / 250);
-        });
-    </script>
+
 </head>
 
 <body>
-    <div class="landtop">
+
+    <div class="land top">
         <div class="header">
             <img class="logoland" src="imgland/logo.png" alt="fehler">
             <form action="forumpress.php">
                 <button class="socsi" type="submit" formaction="index2.html">до фанхати →</button>
             </form>
         </div>
+
         <div class="imgpbl">
             <img class="titlerun" src="imgland/hmzbosutl.svg" alt="fehler">
             <img class="imgpers" src="imgland/мич-реф.png" alt="fehler">
@@ -33,15 +31,19 @@
             <div class="blln"> </div>
         </div>
     </div>
-    <div class="landmain">
+
+
+    <div class="land main">
         <div class="abbook">
             <header class="fling">Життя ламає найсильніших, ставлячи їх на коліна, щоб довести, що вони можуть піднятися. Слабаків же вона не чіпає.</header>
             <h4 class="txtabt">"Друїд: Початок кінця" — перша книга із запланованного циклу книжок по кельтській міфології з фігуруючими головними та другорядними героями. Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam quas, neque, nisi quos, fugit
                 quasi ea expedita itaque vero optio veritatis! Eius maiores ullam itaque perferendis cumque laudantium consequuntur facere?
             </h4>
         </div>
-        <h6>"Друїд: Початок кінця"</h6>
+    </div>
+    <h6>"Друїд: Початок кінця"</h6>
 
+    <div class="land main">
         <div class="anot">
             <div class="rgttopedgtxt">
                 <header>Анотація</header>
@@ -56,6 +58,8 @@
                 за собою шлях жорстоких кровопролитних баталій, зрад, ілюзій та «сірого» світу. Чи зможе Мічеїл Патерсон вижити у новому для нього світі, але рідним по праву крові? Чи зможе він знайти, що шукає і не зламатися, не полягти у полі бою, і
                 не програти духові мертвого війська?<br> А чи зможете ви дочитати це і не зійти з глузду?</p>
         </div>
+    </div>
+    <div class="land main">
         <div class="imggal">
             <header class="illgal">Ілюстрації та персонажі</header>
             <div class="imagegal">
@@ -73,17 +77,23 @@
                 <img class="arrowr" src="imgland/arrow.svg" alt="fehler">
             </div>
         </div>
+    </div>
+    <div class="land main">
         <div class="trailerbl">
             <header class="trlhed">Анімований 3D-трейлер</header>
             <div class="trailer">trailer</div>
         </div>
+    </div>
+    <div class="land main">
         <div class="ordb">
             <header>Замовити</header>
             <img class="order" src="imgland/add new art.svg" alt="fehler">
             <header>Книгу</header>
         </div>
     </div>
-    <div class="landbottom">
+
+
+    <div class="land bottom">
         <div class="contacts">
             <div class="tkleinb">Контакти:</div>
             <div class="tcontacts">Юлія Єремій</div>
@@ -103,6 +113,26 @@
         </div>
     </div>
 
+
+
+
+    <script>
+        function onEntry(entry) {
+            entry.forEach(change => {
+                if (change.isIntersecting) {
+                    change.target.classList.add('element-show');
+                }
+            });
+        }
+        let options = {
+            threshold: [0.2]
+        };
+        let observer = new IntersectionObserver(onEntry, options);
+        let elements = document.querySelectorAll('.land');
+        for (let elm of elements) {
+            observer.observe(elm);
+        }
+    </script>
 </body>
 
 </html>
