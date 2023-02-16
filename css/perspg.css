@@ -9,35 +9,70 @@ body {
 }
 
 
+/*хочу добавить постепенное появление страницы, оставив после появления в статичном состоянии*/
+
+
 /* Верх сайта: хэдер, картинки и текст */
+
+
+/*при скроле постепенное выплывание всех блоков под fadein*/
 
 .landtop {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-image: linear-gradient(90deg, rgb(157, 132, 112) 5%, rgb(44, 33, 23));
-    -webkit-animation: gradient 3s linear infinite;
-    animation: gradient 3s linear infinite;
-}
-
-.header {
-    margin-top: 3%;
-    width: 35%;
-    height: 30%;
-    background: rgba(255, 246, 238, 0.3);
-    border-radius: 20px;
-    display: flex;
-    justify-content: center;
+    background: url(../imgland/darkforest.jpg);
+    height: 100%;
 }
 
 .titlerun {
-    width: 80%;
+    position: absolute;
+    top: -10%;
+    left: 21%;
+    width: 59%;
     height: 100%;
     padding: 10px 0;
 }
 
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 120px;
+    width: 100%;
+}
+
+.socsi {
+    padding: 10px 15px;
+    background-color: #8F755C;
+    color: #FFF6EE;
+    border-radius: 15px;
+    font-size: 120%;
+    border: 0;
+    cursor: pointer;
+    font-weight: lighter;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.socsi:hover {
+    background-color: #35271B;
+    transition: ease, 0.3s all;
+}
+
 .imgpers {
-    width: 43%;
+    margin-top: 2%;
+    width: 40%;
+    margin-bottom: 30px;
+}
+
+.blln {
+    position: absolute;
+    top: 92%;
+    left: 7%;
+    background-color: #070402;
+    text-align: center;
+    width: 85%;
+    padding: 30px 60px;
 }
 
 .imgpbl {
@@ -49,38 +84,27 @@ body {
 
 .texttitle {
     position: absolute;
-    top: 70%;
-    left: 55%;
+    top: 57%;
+    left: 52%;
     transform: translate(-55%, -70%);
 }
 
 .logoland {
-    width: 15%;
-    position: absolute;
-    top: 15%;
-    left: 43%;
+    width: 9%;
 }
 
 h1 {
-    font-size: 240%;
-    width: 90%;
+    font-size: 150%;
+    width: 100%;
     color: #FFF6EE;
-    font-weight: lighter;
+    font-weight: 100;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin-bottom: 10px;
 }
 
 h2 {
-    width: max-content;
-    color: #FFF6EE;
-    font-weight: lighter;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-}
-
-h3 {
-    position: absolute;
-    bottom: -20%;
-    right: 30%;
-    width: max-content;
+    font-size: 100%;
+    width: 100%;
     color: #FFF6EE;
     font-weight: lighter;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -115,6 +139,7 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 120px 120px;
+    padding-bottom: 100px;
     margin-top: 7%;
 }
 
@@ -128,12 +153,16 @@ h6 {
     margin-bottom: 10%;
 }
 
+
+/*блок с текстом-картинкой(анотация)*/
+
 p {
     width: 80%;
     color: #FFF6EE;
     font-weight: lighter;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    padding: 20px 20px;
+    padding: 20px 0px;
+    margin-left: 20px;
     align-self: flex-end;
 }
 
@@ -150,11 +179,12 @@ p {
 }
 
 .txtabt {
-    width: 80%;
+    width: 75%;
     color: #FFF6EE;
     font-weight: lighter;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    padding: 20px 20px;
+    padding: 20px 0;
+    margin-left: 20px;
     text-align: right;
     align-self: flex-end;
 }
@@ -164,6 +194,7 @@ p {
     justify-content: space-between;
     align-items: center;
     padding: 120px 120px;
+    margin-bottom: 7%;
 }
 
 .bookname {
@@ -174,9 +205,9 @@ p {
 #title {
     background: url(../imgland/darkforest.jpg);
     background-size: cover;
-    color: transparent;
-    -webkit-text-fill-color: transparent;
     background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
     padding: 0;
 }
 
@@ -212,4 +243,258 @@ h5 {
 }
 
 
-/* Низ сайта: про автора, заказать книгу и обратная связь */
+/*блок с иллюстрациями*/
+
+.illgal {
+    position: absolute;
+    top: 324%;
+    width: 40%;
+    left: 0%;
+    padding: 0 120px;
+}
+
+.imggal {
+    display: flex;
+    flex-direction: column;
+    padding: 120px 0;
+    margin-bottom: 7%;
+}
+
+.imagegal {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 0 120px;
+    opacity: 0%;
+}
+
+
+/*выплывание картинок по одной; при прокрутке галереи тосировка их вверх-вниз в шахматном порядке*/
+
+.imagegal:hover {
+    opacity: 100%;
+    animation: fadeIn 5s;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.kel {
+    position: absolute;
+    top: 325%;
+    left: 51%;
+    width: 21%;
+    padding: 0 20px;
+    z-index: 4;
+}
+
+.kelsh {
+    position: absolute;
+    top: 330%;
+    left: 55%;
+    width: 21%;
+    padding: 0 20px;
+    opacity: 24%;
+    z-index: 3;
+}
+
+.bog {
+    position: absolute;
+    top: 360%;
+    left: 30%;
+    width: 21%;
+    padding: 0 20px;
+    z-index: 4;
+}
+
+.bogsh {
+    position: absolute;
+    top: 338%;
+    left: 40%;
+    width: 21%;
+    padding: 0 20px;
+    opacity: 24%;
+    z-index: 3;
+}
+
+.sid {
+    position: absolute;
+    left: 7%;
+    top: 342%;
+    padding: 0 20px;
+    width: 21%;
+    z-index: 2;
+}
+
+.sidsh {
+    position: absolute;
+    left: 16%;
+    top: 347%;
+    padding: 0 20px;
+    width: 21%;
+    opacity: 24%;
+    z-index: 1;
+}
+
+.bea {
+    position: absolute;
+    right: 7%;
+    top: 350%;
+    padding: 0 20px;
+    width: 21%;
+    z-index: 2;
+}
+
+.beash {
+    position: absolute;
+    right: 11%;
+    top: 360%;
+    padding: 0 20px;
+    width: 21%;
+    opacity: 24%;
+    z-index: 1;
+}
+
+.arrow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 83%;
+}
+
+.arrowl {
+    padding: 0 170px;
+    transition: transform .4s;
+}
+
+.arrowl:hover {
+    transform: scale(1.1);
+}
+
+.arrowr {
+    padding: 0 170px;
+    transform: rotate(180deg);
+    transition: transform .4s;
+}
+
+.arrowr:hover {
+    transform: scale(1.1) rotate(180deg);
+}
+
+
+/*блок с трейлером (будет добавлен когда закончу анимацию)*/
+
+.trailerbl {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10%;
+}
+
+.trlhed {
+    position: absolute;
+    top: 450%;
+    width: 35%;
+    left: 0%;
+    padding: 0 120px;
+}
+
+.trailer {
+    background-color: #181413;
+    color: burlywood;
+    text-align: center;
+    width: 100%;
+    padding: 120px 120px;
+    margin: 140px 0;
+}
+
+.trailer:hover {
+    color: rgb(87, 26, 26);
+}
+
+
+/*блок с поп ап формой*/
+
+.ordb {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 10%;
+    margin-bottom: 7%;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.order {
+    width: 40%;
+    margin: 0 50px;
+    transition: transform .4s;
+}
+
+
+/*хочу добавить при нажатии pop up форму с возможностью заказа*/
+
+.order:hover {
+    transform: scale(1.2);
+}
+
+
+/* Низ сайта: контакты и соц сети */
+
+.landbottom {
+    margin-top: 10%;
+    background-color: #181413;
+}
+
+.tkleinb {
+    font-size: 170%;
+    color: #FFF6EE;
+    font-weight: lighter;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.contacts {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 120px;
+}
+
+.tcontacts {
+    margin: 20px 0;
+    font-size: 100%;
+    color: #FFF6EE;
+    font-weight: lighter;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.link {
+    text-decoration: solid;
+    margin: 20px 0;
+    color: #FFF6EE;
+    font-size: 100%;
+    font-weight: lighter;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.emndph {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.inst {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.telgr {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
