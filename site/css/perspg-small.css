@@ -1,0 +1,224 @@
+@media screen and (min-width: 319px) and (max-width: 859px) {
+    body {
+        background: #070402;
+    }
+    .land {
+        opacity: 0;
+        transform: translateY(30%);
+    }
+    .land.element-show {
+        opacity: 1;
+        transition: all 1s;
+        transform: translateY(0%);
+    }
+    /* Верх сайта: хэдер, картинки и текст */
+    .land.top {
+        background: url(../imgland/lake\ 1.jpg);
+        /*height: 100vh;*/
+    }
+    .logoland {
+        padding-top: 8px;
+        width: 20%;
+    }
+    .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 24px;
+        width: 100%;
+    }
+    .socsi {
+        padding: 10px 15px;
+        background-color: #8F755C;
+        color: #FFF6EE;
+        border-radius: 10px;
+        font-size: 75%;
+        border: 0;
+        cursor: pointer;
+        font-weight: lighter;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+    .socsi:hover {
+        background-color: #35271B;
+        transition: ease, 0.3s all;
+    }
+    .titlerun {
+        width: 59%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-top: 55%;
+        margin-bottom: 65%;
+        flex-shrink: 0;
+    }
+    .imgpbl {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        /*max-width: 1920px;*/
+    }
+    h1 {
+        /*font-size: 150%;
+        text-align: right;
+        width: 70%;
+        color: #FFF6EE;
+        font-weight: 100;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        margin-bottom: 10px;*/
+        width: 175px;
+        height: 75px;
+        color: #FFF;
+        text-align: right;
+        font-family: Helvetica Neue;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 200;
+        line-height: normal;
+        margin-left: 45%;
+    }
+    h2 {
+        font-size: 80%;
+        width: 100%;
+        margin-left: 47%;
+        margin-bottom: 50px;
+        color: #FFF6EE;
+        font-weight: lighter;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+    /* Середина сайта: про книгу, аннотация, трейлер (видео будет потом), иллюстрации(потом) и переход на соц.сеть(форум)(!в работе!)*/
+    .land.main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 7%;
+    }
+    header {
+        font-size: 150%;
+        color: #FFF6EE;
+        font-weight: lighter;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+    .fling {
+        font-size: 140%;
+        width: 100%;
+        color: #FFF6EE;
+        font-weight: lighter;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+    .abbook {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 24px 24px;
+        padding-bottom: 100px;
+        margin-top: 7%;
+    }
+    h6 {
+        font-size: 100%;
+        margin-left: 24px;
+        align-self: flex-start;
+        color: #FFF6EE;
+        font-weight: lighter;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        margin-bottom: 20%;
+    }
+    /*блок с текстом-картинкой(анотация)*/
+    .txtabt {
+        width: 75%;
+        color: #FFF6EE;
+        font-weight: lighter;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        padding: 20px 0;
+        margin-left: 20px;
+        text-align: right;
+        align-self: flex-end;
+    }
+    .bookname {
+        margin: 0 auto;
+        width: 298px;
+    }
+    /*блок с иллюстрациями*/
+    /*выплывание картинок по одной; при прокрутке галереи тосировка их вверх-вниз в шахматном порядке*/
+    /*блок с трейлером (будет добавлен когда закончу анимацию)*/
+    /*блок с поп ап формой*/
+    /*хочу добавить при нажатии pop up форму с возможностью заказа*/
+    .order {
+        width: 40%;
+        margin: 0 50px;
+        transition: transform .4s;
+    }
+    .order:hover {
+        transform: scale(1.2);
+    }
+    /* Низ сайта: контакты и соц сети */
+    .land.bottom {
+        margin-top: 10%;
+        background-color: #181413;
+    }
+    .tkleinb {
+        font-size: 70%;
+        color: #FFF6EE;
+        font-weight: lighter;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+    .contacts {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 30px 24px;
+    }
+    .tcontacts {
+        font-size: 40%;
+        color: #FFF6EE;
+        font-weight: lighter;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+    .name {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0 5%;
+        margin-top: 2px;
+    }
+    .tcontacts.soc {
+        display: none;
+    }
+    .link.site {
+        display: none;
+    }
+    .link {
+        text-decoration: solid;
+        color: #FFF6EE;
+        font-size: 40%;
+        font-weight: lighter;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+    .emndph {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .phone {
+        align-self: center;
+        padding: 0 10px;
+    }
+    .inst {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .instagram {
+        align-self: center;
+        padding: 0 10px;
+    }
+    .telgr {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .telegram {
+        align-self: center;
+        padding-left: 10px;
+    }
+}
