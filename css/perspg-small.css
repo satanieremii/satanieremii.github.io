@@ -123,11 +123,11 @@
         display: flex;
         flex-direction: column;
     }
-    .abbook-left{
+    .abbook-left {
         text-align: left;
         align-items: start;
     }
-    .abbook-right{
+    .abbook-right {
         text-align: right;
         align-items: end;
     }
@@ -192,7 +192,7 @@
         align-items: center;
         padding: 30px 24px;
     }
-    .texttitle{
+    .texttitle {
         width: 100%;
         display: flex;
         flex-direction: column;
@@ -252,78 +252,65 @@
         align-self: center;
         padding-left: 10px;
     }
-    .rgttopedgtxt{
+    .rgttopedgtxt {
         background-image: url("../imgland/ДРУЇД.png");
         background-size: contain;
         background-repeat: no-repeat;
-
         height: 400px;
-
         display: flex;
         flex-direction: column;
         justify-content: center;
         padding-left: 50px;
     }
-    .anot-description{
+    .anot-description {
         display: flex;
         justify-content: right;
         text-align: right;
         padding-right: 20px;
     }
-    .ordb{
+    .ordb {
         display: flex;
-
     }
-    .ordb-left{
+    .ordb-left {
         align-self: flex-start;
         padding-top: 50px;
     }
-    .ordb-right{
+    .ordb-right {
         align-self: flex-end;
         padding-bottom: 50px;
     }
-
-
     .imggal {
         display: flex;
         flex-direction: column;
         /*padding: 120px 0;*/
     }
-
     .arrow {
         display: flex;
         justify-content: center;
         align-items: center;
         margin-top: 35%;
     }
-
     .arrowl {
         padding: 0 180px;
         transition: transform .4s;
     }
-
     .arrowl:hover {
         transform: scale(1.1);
     }
-
     .arrowr {
         padding: 0 180px;
         transform: rotate(180deg);
         transition: transform .4s;
     }
-
     .arrowr:hover {
         transform: scale(1.1) rotate(180deg);
     }
-
     .imagegal {
         display: flex;
         justify-content: space-evenly;
         /*padding: 0 120px;*/
-
         margin-bottom: 200px;
     }
-
     /*выплывание картинок по одной; при прокрутке галереи тосировка их вверх-вниз в шахматном порядке*/
     .kel {
         position: absolute;
@@ -333,7 +320,6 @@
         padding: 0 20px;
         z-index: 4;
     }
-
     .kelsh {
         position: absolute;
         top: 23%;
@@ -343,7 +329,6 @@
         opacity: 24%;
         z-index: 3;
     }
-
     .bog {
         position: absolute;
         top: 40%;
@@ -352,7 +337,6 @@
         padding: 0 20px;
         z-index: 4;
     }
-
     .bogsh {
         position: absolute;
         top: 43%;
@@ -362,7 +346,6 @@
         opacity: 24%;
         z-index: 3;
     }
-
     .sid {
         position: absolute;
         left: 7%;
@@ -371,7 +354,6 @@
         width: 21%;
         z-index: 2;
     }
-
     .sidsh {
         position: absolute;
         left: 16%;
@@ -381,7 +363,6 @@
         opacity: 24%;
         z-index: 1;
     }
-
     .bea {
         position: absolute;
         right: 7%;
@@ -390,7 +371,6 @@
         width: 21%;
         z-index: 2;
     }
-
     .beash {
         position: absolute;
         right: 11%;
@@ -399,5 +379,34 @@
         width: 21%;
         opacity: 24%;
         z-index: 1;
+    }
+    .emndph {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .phone {
+        display: flex;
+    }
+    .inst {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .instagram {
+        display: flex;
+    }
+    .telgr {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .telegram {
+        display: flex;
+    }
+    .name {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 }
