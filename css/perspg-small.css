@@ -14,7 +14,10 @@
     /* Верх сайта: хэдер, картинки и текст */
     .land.top {
         background: url(../imgland/lake\ 1.jpg);
-        /*height: 100vh;*/
+        background-position: center;
+        background-size: 400%;
+        background-repeat: no-repeat;
+        height: 80vh;
     }
     .logoland {
         padding-top: 8px;
@@ -253,7 +256,7 @@
         padding-left: 10px;
     }
     .rgttopedgtxt {
-        background-image: url("../imgland/ДРУЇД.png");
+        background-image: url("../imgland/drud.png");
         background-size: contain;
         background-repeat: no-repeat;
         height: 400px;
@@ -270,6 +273,8 @@
     }
     .ordb {
         display: flex;
+        flex-direction: column;
+        gap: 22px;
     }
     .ordb-left {
         align-self: flex-start;
@@ -282,6 +287,7 @@
     .imggal {
         display: flex;
         flex-direction: column;
+        width: 100%;
         /*padding: 120px 0;*/
     }
     .arrow {
@@ -293,6 +299,7 @@
     .arrowl {
         padding: 0 180px;
         transition: transform .4s;
+        display: none;
     }
     .arrowl:hover {
         transform: scale(1.1);
@@ -301,19 +308,39 @@
         padding: 0 180px;
         transform: rotate(180deg);
         transition: transform .4s;
+        display: none;
     }
     .arrowr:hover {
         transform: scale(1.1) rotate(180deg);
     }
+
+    .illgal {
+        text-align: center;
+    }
+
     .imagegal {
-        display: flex;
-        justify-content: space-evenly;
+        display: grid;
+        width: 90%;
+        margin: auto;
+        grid-template-columns: 1fr 1fr;
         /*padding: 0 120px;*/
         margin-bottom: 200px;
+        margin-top: 30px;
+        gap: 15px;
+    }
+
+    .imagegal>div>img {
+        width: 40vw;
+        margin-left: -4px;
+    }
+
+    .imagegal>div>img:nth-child(even) {
+        /* grid-column: span 2; */
+        margin-top: -165px;
+        transform: translate(30px, 0);
     }
     /*выплывание картинок по одной; при прокрутке галереи тосировка их вверх-вниз в шахматном порядке*/
     .kel {
-        position: absolute;
         top: 20%;
         left: 51%;
         width: 21%;
@@ -321,7 +348,6 @@
         z-index: 4;
     }
     .kelsh {
-        position: absolute;
         top: 23%;
         left: 55%;
         width: 21%;
@@ -330,7 +356,6 @@
         z-index: 3;
     }
     .bog {
-        position: absolute;
         top: 40%;
         left: 30%;
         width: 21%;
@@ -338,7 +363,6 @@
         z-index: 4;
     }
     .bogsh {
-        position: absolute;
         top: 43%;
         left: 40%;
         width: 21%;
@@ -347,7 +371,6 @@
         z-index: 3;
     }
     .sid {
-        position: absolute;
         left: 7%;
         top: 30%;
         padding: 0 20px;
@@ -355,7 +378,6 @@
         z-index: 2;
     }
     .sidsh {
-        position: absolute;
         left: 16%;
         top: 33%;
         padding: 0 20px;
@@ -364,7 +386,6 @@
         z-index: 1;
     }
     .bea {
-        position: absolute;
         right: 7%;
         top: 38%;
         padding: 0 20px;
@@ -372,7 +393,6 @@
         z-index: 2;
     }
     .beash {
-        position: absolute;
         right: 11%;
         top: 40%;
         padding: 0 20px;
@@ -408,5 +428,123 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+    }
+
+    .telgr .tg,
+    .inst .inst,
+    .footerPhone {
+        display: block;
+        width: 24px;
+        height: 24px;
+        background-image: url('../imgland/telegram.png');
+        background-position: center;
+        background-size: 24px;
+        background-repeat: no-repeat;
+    }
+
+    .inst .inst {
+        background-image: url('../imgland/inst.png');
+    }
+
+    .footerPhone {
+        background-image: url('../imgland/phone.png');
+    }
+
+    .overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 2;
+    }
+
+    .popup {
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 85vw;
+        /* height: 70vh; */
+        background: #181413;
+        z-index: 3;
+        border-radius: 15px;
+        padding: 45px 40px 25px 40px;
+    }
+    
+    .popup-content {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .popup-content > h3 {
+        color: #FFF;
+        text-align: center;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;;
+        font-size: 30px;
+        font-style: normal;
+        font-weight: 100;
+        line-height: normal;
+    }
+
+    .popup-content > input, 
+    .popup-content > select {
+        display: block;
+        border-radius: 20px;
+        color: #8F755C;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;;
+        font-size: 26px;
+        font-style: normal;
+        font-weight: 300;
+        background-color: #DDD4CC;
+        box-sizing: border-box;
+        padding: 14px 10px;
+    }
+
+    .popup-content > input::placeholder {
+        color: #8F755C;
+    }
+
+    .popup-content > div {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .popup-content > div > img {
+        cursor: pointer;
+    }
+
+    #popup-shit {
+        display: none;
+    }
+
+    #popup-shit > h3 {
+        color: #FFF;
+        text-align: center;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-size: 34px;
+        font-style: normal;
+        font-weight: 100;
+        line-height: normal;
+        margin-bottom: 30px;
+    }
+
+    #popup-shit > h3:last-of-type {
+        margin-bottom: 10px;
+        margin-top: 10px;
+    }
+
+    #popup-shit > img {
+        width: 90%;
+        display: block;
+        margin: auto;
+    }
+    
+    .order {
+        cursor: pointer;
     }
 }
