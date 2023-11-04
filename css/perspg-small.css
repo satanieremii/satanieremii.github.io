@@ -17,7 +17,10 @@
         background-position: center;
         background-size: 400%;
         background-repeat: no-repeat;
-        height: 80vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /*height: 80vh;*/
     }
     .logoland {
         padding-top: 8px;
@@ -68,6 +71,7 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+        margin-top: 30%;
         /*text-align: center;*/
         /*max-width: 1920px;*/
     }
@@ -75,13 +79,13 @@
         /*font-size: 150%;
         text-align: right;
         width: 70%;
-        color: #FFF6EE;
+        
         font-weight: 100;
         font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
         margin-bottom: 10px;*/
         width: 175px;
         /*height: 75px;*/
-        color: #FFF;
+        color: #FFF6EE;
         /*text-align: right;*/
         font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
         font-size: 20px;
@@ -89,7 +93,7 @@
         font-weight: 200;
         /*line-height: normal;*/
         /*margin-left: 45%;*/
-        text-align: right;
+        text-align: center;
     }
     h2 {
         font-size: 80%;
@@ -98,6 +102,13 @@
         color: #FFF6EE;
         font-weight: lighter;
         font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+    .blln {
+        background-color: #070402;
+        text-align: center;
+        width: 85%;
+        margin-top: 50%;
+        padding: 30px;
     }
     /* Середина сайта: про книгу, аннотация, трейлер (видео будет потом), иллюстрации(потом) и переход на соц.сеть(форум)(!в работе!)*/
     .land.main {
@@ -199,8 +210,8 @@
         width: 100%;
         display: flex;
         flex-direction: column;
-        align-items: end;
-        margin-right: 40px;
+        align-items: center;
+        /*margin-right: 40px;*/
     }
     .tcontacts {
         font-size: 40%;
@@ -270,6 +281,12 @@
         justify-content: right;
         text-align: right;
         padding-right: 20px;
+        padding: 0 0 100px 0;
+        font-size: 150%;
+        color: #FFF6EE;
+        font-weight: lighter;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        /*padding: 20px 0;*/
     }
     .ordb {
         display: flex;
@@ -313,11 +330,9 @@
     .arrowr:hover {
         transform: scale(1.1) rotate(180deg);
     }
-
     .illgal {
         text-align: center;
     }
-
     .imagegal {
         display: grid;
         width: 90%;
@@ -328,12 +343,10 @@
         margin-top: 30px;
         gap: 15px;
     }
-
     .imagegal>div>img {
         width: 40vw;
         margin-left: -4px;
     }
-
     .imagegal>div>img:nth-child(even) {
         /* grid-column: span 2; */
         margin-top: -165px;
@@ -400,6 +413,9 @@
         opacity: 24%;
         z-index: 1;
     }
+    .trailer-responsive iframe {
+        width: 100%
+    }
     .emndph {
         display: flex;
         flex-direction: column;
@@ -429,7 +445,6 @@
         flex-direction: column;
         align-items: center;
     }
-
     .telgr .tg,
     .inst .inst,
     .footerPhone {
@@ -441,15 +456,15 @@
         background-size: 24px;
         background-repeat: no-repeat;
     }
-
     .inst .inst {
         background-image: url('../imgland/inst.png');
     }
-
     .footerPhone {
         background-image: url('../imgland/phone.png');
     }
-
+    .iframe {
+        width: 24px;
+    }
     .overlay {
         display: none;
         position: fixed;
@@ -460,7 +475,6 @@
         background: rgba(0, 0, 0, 0.5);
         z-index: 2;
     }
-
     .popup {
         display: none;
         position: fixed;
@@ -474,29 +488,28 @@
         border-radius: 15px;
         padding: 45px 40px 25px 40px;
     }
-    
     .popup-content {
         display: flex;
         flex-direction: column;
         gap: 30px;
     }
-
-    .popup-content > h3 {
+    .popup-content>h3 {
         color: #FFF;
         text-align: center;
-        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        ;
         font-size: 30px;
         font-style: normal;
         font-weight: 100;
         line-height: normal;
     }
-
-    .popup-content > input, 
-    .popup-content > select {
+    .popup-content>input,
+    .popup-content>select {
         display: block;
         border-radius: 20px;
         color: #8F755C;
-        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        ;
         font-size: 26px;
         font-style: normal;
         font-weight: 300;
@@ -504,25 +517,20 @@
         box-sizing: border-box;
         padding: 14px 10px;
     }
-
-    .popup-content > input::placeholder {
+    .popup-content>input::placeholder {
         color: #8F755C;
     }
-
-    .popup-content > div {
+    .popup-content>div {
         display: flex;
         justify-content: space-between;
     }
-
-    .popup-content > div > img {
+    .popup-content>div>img {
         cursor: pointer;
     }
-
     #popup-shit {
         display: none;
     }
-
-    #popup-shit > h3 {
+    #popup-shit>h3 {
         color: #FFF;
         text-align: center;
         font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -532,18 +540,15 @@
         line-height: normal;
         margin-bottom: 30px;
     }
-
-    #popup-shit > h3:last-of-type {
+    #popup-shit>h3:last-of-type {
         margin-bottom: 10px;
         margin-top: 10px;
     }
-
-    #popup-shit > img {
+    #popup-shit>img {
         width: 90%;
         display: block;
         margin: auto;
     }
-    
     .order {
         cursor: pointer;
     }

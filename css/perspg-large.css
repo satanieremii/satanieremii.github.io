@@ -95,25 +95,23 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        margin-bottom: 300px;
+        margin-bottom: 10%;
     }
     header {
-        font-size: 240%;
+        font-size: 180%;
         color: #FFF6EE;
         font-weight: lighter;
         font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     }
     .fling {
         margin-top: 10%;
-        font-size: 240%;
-        /*width: 60%;*/
-        color: #FFF6EE;
-        font-weight: lighter;
-        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        width: 110%;
     }
     .abbook-container {
+        margin-top: 300px;
         display: flex;
         flex-direction: row;
+        margin-bottom: 300px;
     }
     .abbook {
         display: flex;
@@ -128,13 +126,12 @@
         justify-content: end;
     }
     h6 {
-        /*padding: 0 120px;*/
         font-size: 100%;
         align-self: flex-start;
         color: #FFF6EE;
         font-weight: lighter;
         font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-        /*margin-bottom: 20%;*/
+        margin-top: 20%;
     }
     /*блок с текстом-картинкой(анотация)*/
     p {
@@ -156,11 +153,6 @@
         /*position: absolute;*/
         /*top: 35%;*/
         background-image: url("../imgland/drud.png");
-
-
-
-        
-
         background-size: contain;
         background-repeat: no-repeat;
         background-position: center;
@@ -178,7 +170,12 @@
     }
     .anot-description p {
         padding: 100px 0;
-        text-align: right;
+        text-align: end;
+        font-size: medium;
+        color: #FFF6EE;
+        font-weight: lighter;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        /*padding: 20px 0;*/
     }
     .txtabt {
         width: 75%;
@@ -192,6 +189,7 @@
     }
     .anot {
         display: flex;
+        margin-bottom: 10%;
     }
     .bookname {
         margin: 0 auto;
@@ -212,7 +210,9 @@
     }
     .imagegal {
         display: flex;
-        justify-content: space-evenly;
+        flex-direction: column;
+        justify-content: space-between'
+
         /*padding: 0 120px;*/
     }
     /*выплывание картинок по одной; при прокрутке галереи тосировка их вверх-вниз в шахматном порядке*/
@@ -331,6 +331,10 @@
     .trailer:hover {
         color: rgb(87, 26, 26);
     }
+    .trailer-responsive iframe {
+        width: 560px;
+        height: 315px;
+    }
     /*блок с поп ап формой*/
     .ordb {
         display: flex;
@@ -395,18 +399,11 @@
         flex-direction: column;
         align-items: center;
     }
-    .instagram {
-        /* display: none; */
-    }
     .telgr {
         display: flex;
         flex-direction: column;
         align-items: center;
     }
-    .telegram {
-        /* display: none; */
-    }
-
     .telgr .tg,
     .inst .inst,
     .footerPhone {
@@ -418,11 +415,9 @@
         background-size: 24px;
         background-repeat: no-repeat;
     }
-
     .inst .inst {
         background-image: url('../imgland/inst.png');
     }
-
     .footerPhone {
         background-image: url('../imgland/phone.png');
     }
@@ -431,8 +426,6 @@
         flex-direction: column;
         align-items: center;
     }
-
-
     .overlay {
         display: none;
         position: fixed;
@@ -443,7 +436,6 @@
         background: rgba(0, 0, 0, 0.5);
         z-index: 2;
     }
-
     .popup {
         display: none;
         position: fixed;
@@ -457,29 +449,28 @@
         border-radius: 15px;
         padding: 45px 40px 25px 40px;
     }
-    
     .popup-content {
         display: flex;
         flex-direction: column;
         gap: 30px;
     }
-
-    .popup-content > h3 {
+    .popup-content>h3 {
         color: #FFF;
         text-align: center;
-        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        ;
         font-size: 28px;
         font-style: normal;
         font-weight: 100;
         line-height: normal;
     }
-
-    .popup-content > input, 
-    .popup-content > select {
+    .popup-content>input,
+    .popup-content>select {
         display: block;
         border-radius: 20px;
         color: #8F755C;
-        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        ;
         font-size: 23px;
         font-style: normal;
         font-weight: 300;
@@ -487,25 +478,20 @@
         box-sizing: border-box;
         padding: 14px 10px;
     }
-
-    .popup-content > input::placeholder {
+    .popup-content>input::placeholder {
         color: #8F755C;
     }
-
-    .popup-content > div {
+    .popup-content>div {
         display: flex;
         justify-content: space-between;
     }
-
-    .popup-content > div > img {
+    .popup-content>div>img {
         cursor: pointer;
     }
-
     #popup-shit {
         display: none;
     }
-
-    #popup-shit > h3 {
+    #popup-shit>h3 {
         color: #FFF;
         text-align: center;
         font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -515,18 +501,15 @@
         line-height: normal;
         margin-bottom: 30px;
     }
-
-    #popup-shit > h3:last-of-type {
+    #popup-shit>h3:last-of-type {
         margin-bottom: 10px;
         margin-top: 10px;
     }
-
-    #popup-shit > img {
+    #popup-shit>img {
         width: 90%;
         display: block;
         margin: auto;
     }
-    
     .order {
         cursor: pointer;
     }
